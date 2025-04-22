@@ -76,8 +76,8 @@ data "aws_iam_policy_document" "default" {
 data "aws_partition" "current" {}
 
 module "s3_bucket" {
-  source  = "cloudposse/s3-log-storage/aws"
-  version = "1.4.3"
+  source  = "git@github.com:wp-davisona/terraform-aws-s3-log-storage.git//?ref=version-upgrade"
+  #version = "1.4.3"
 
   acl                           = var.acl
   bucket_name                   = var.bucket_name
